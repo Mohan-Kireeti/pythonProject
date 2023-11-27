@@ -28,3 +28,14 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    @app.route('/')
+    def homePage():
+     return render_template('home.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
